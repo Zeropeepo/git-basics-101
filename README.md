@@ -1,4 +1,4 @@
-# git-basics-101
+# Git Fundamentals by BCC Data Science :)
 <p align="center">
   <img width="100%" src="img/P1.png" alt="pic1">
 </p>
