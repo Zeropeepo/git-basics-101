@@ -103,13 +103,13 @@ git commit -m "First commit"  # Save the changes with a meaningful commit messag
 cd
 mkdir ds-github
 cd ds-github
-git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)  
+git clone https://github.com/your-username/your-repo-name.git 
 cd your-repo-name
 ```
 
 3. Use the Token for Git Authentication
 ```bash
-git remote set-url origin [https://YOUR_GITHUB_USERNAME:TOKEN@github.com/YOUR_GITHUB_USERNAME/YOUR_REPO.git](https://YOUR_GITHUB_USERNAME:TOKEN@github.com/YOUR_GITHUB_USERNAME/YOUR_REPO.git)
+git remote set-url origin https://YOUR_GITHUB_USERNAME:TOKEN@github.com/YOUR_GITHUB_USERNAME/YOUR_REPO.git
 git fetch
 ```
 
@@ -168,7 +168,7 @@ git pull origin <branch-name>
 
 ---
 
-## ☁️ Google Colab Integration
+## Google Colab Integration
 If your team uses Google Colab, you don't need to manually download and upload `.ipynb` files. 
 
 **Saving to GitHub:**
@@ -184,7 +184,7 @@ If your team uses Google Colab, you don't need to manually download and upload `
 2. Paste the repository URL or search for it.
 3. Click the notebook you want to edit.
 
-## 📊 Kaggle Integration
+## Kaggle Integration
 Kaggle provides built-in Git sync, which is perfect for competitions or storing model experiments.
 
 1. **Link Account:** Go to your Kaggle Profile > **Settings** > **Linked Accounts** > Connect GitHub.
@@ -195,12 +195,36 @@ Kaggle provides built-in Git sync, which is perfect for competitions or storing 
   <img width="100%" src="img/P8.png" alt="pic8">
 </p>
 
-## ⚠️ Data Science & AI Best Practices
-Collaborating on ML/AI projects requires some extra rules:
-1. **Never push datasets or model weights:** Files like `.csv`, `.pt`, `.pth`, or large image datasets will break your repo. Always add them to a `.gitignore` file.
+## ⚠️ Data Science Best Practices
+Collaborating on Data Science projects requires some extra rules:
+1. **Never push datasets or saved models:** Files like `.csv`, `.json`, or `.pkl` (saved ML models) can easily exceed GitHub's file size limit and break your repo. If you have a 500MB dataset for your EDA, keep it local! Always add them to a `.gitignore` file.
 2. **Notebook Merge Conflicts:** `.ipynb` files are basically huge JSON files. If two people edit the same notebook simultaneously, the conflict is extremely hard to fix. 
-   * *Solution:* Assign one notebook per person (e.g., `EDA_Budi.ipynb`, `Model_Siti.ipynb`), or move stable architecture code into `.py` scripts.
+   * *Solution:* Assign one notebook per person (e.g., `EDA_Budi.ipynb`, `Modeling_Siti.ipynb`), or move stable Python functions into `.py` scripts.
 
+### 📝 Bonus: Standard Data Science .gitignore
+Create a file named `.gitignore` in your repository folder and copy this inside to prevent uploading giant files automatically:
+
+```text
+# Datasets
+*.csv
+*.json
+*.dat
+*.xlsx
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Python & Environments
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Machine Learning Saved Models
+*.pkl
+*.joblib
+```
 ---
 
 ## Video
