@@ -241,11 +241,18 @@ I highly recommend starting with the basics and using the CLI version of Git. On
 
 ---
 
-## Assignment
+## Assignment Submission
 
-1. **Personal Repo:** Make your own repository for personal use and you can use that repository to clone another material in the future. <br> You can use this format: `TeamNumber-YourName` (Use Full Name). *ex = 1-Pieter*
-2. **Team Repo:** Set up a team repository to collaborate and store code with your team. <br> You can use a structured format like this: `TeamNumber-MemberName1-MemberName2` (Use FullName). *ex = 1-Pieter-Toni*
-3. **DS Repo** Try out collaborating with your team in your DS projects by making sure your .ipynb files are in the same repositories.
+Please complete the following tasks and submit the repository links via the provided Google Form:
+
+1. **Personal Repository Link**
+   * **Repo Name Format:** `TeamNumber-YourName` (ex: `1-Pieter`)
+   * **Requirement:** Must contain at least one `.ipynb` file successfully pushed using the **"Save to GitHub"** feature directly from Google Colab or Kaggle.
+
+2. **Team Repository Link**
+   * **Repo Name Format:** `TeamNumber-MemberName1-MemberName2` (ex: `1-Pieter-Toni`)
+   * **Requirement:** - Must include the standard Data Science `.gitignore` file.
+     - Each team member must push their own separate `.ipynb` file (e.g., `EDA_Pieter.ipynb` and `Modeling_Toni.ipynb`) to practice safe collaboration and avoid merge conflicts.
 
 ## Source:
 - [Git](https://git-scm.com/docs/gittutorial)
